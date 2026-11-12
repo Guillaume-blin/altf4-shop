@@ -5,11 +5,24 @@
   <title>Redirection vers Déco 3D</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
-  <link rel="canonical" href="https://www.deco-3d.fr/">
-  <meta http-equiv="refresh" content="0; url=https://www.deco-3d.fr/">
-  <script>window.location.replace("https://www.deco-3d.fr/");</script>
+  <script>
+    (function () {
+      var cible = "https://www.deco-3d.fr" + location.pathname + location.search + location.hash;
+      var lien = document.createElement("link");
+      lien.rel = "canonical";
+      lien.href = "https://www.deco-3d.fr" + location.pathname;
+      document.head.appendChild(lien);
+      location.replace(cible);
+    })();
+  </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=https://www.deco-3d.fr/">
+  </noscript>
 </head>
 <body>
-  <p>Cette boutique a déménagé : <a href="https://www.deco-3d.fr/">www.deco-3d.fr</a></p>
+  <noscript>
+    <p>Cette boutique a déménagé : <a href="https://www.deco-3d.fr/">www.deco-3d.fr</a></p>
+  </noscript>
+  <p>Redirection vers la boutique Déco 3D…</p>
 </body>
 </html>
